@@ -16,10 +16,39 @@ p{
     padding-bottom: 50px;
     padding-left: 80px;
 }
-// the order matters
+/* the order matters */
 p{
-	padding: 50px 30px 50px 80px
+	padding: 50px 30px 50px 80px;
+}
+p{
+	padding: 50px 30px 80px; /*top 50px; right, left are 30px, bottom 80px*/
+	padding: 50px 80px; /*top, bottom are 50px; left, right are 80px*/
+	padding: 50px; /*all are 50px*/
 }
 ```
+
+###### group selectors
+```css
+h1 {
+    text-align: center;
+    color: red;
+}
+h2 {
+    text-align: center;
+    color: red;
+}
+p {
+    text-align: center;
+    color: red;
+}
+
+h1, h2, p{
+	text-align: center;
+    color: red;
+}
+```
+
 ###### box model
 content, padding, border, margin
+
+###### What might need to be changed in CSS?
