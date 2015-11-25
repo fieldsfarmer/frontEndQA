@@ -16,11 +16,24 @@ POST: upload data from the browser to server; returns information from the serve
 ###### 4. Closure
 A closure is that a function having access to the parent scope, even after the parent function has closed.
 ```javascript
+// add is assigned with the value of a self-invoking function
 var add = (function(){
 	var count = 0;
-	return function(){++count;};
+	return function(){return count+=1;};
 })();
 add();
 add();
-add();
+add(); // count is now 3
+function create_counter(initial){
+	var x = initial || 0;
+	return {
+		inc: function(){
+			return x+=1;
+		}
+	}
+}
+var c1 = create_counter();
+c1.inc();
+c1.inc();
+c1.inc();
 ```
