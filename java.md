@@ -36,12 +36,19 @@ class Base{
 	Base(int a){
 		x = a;
 	}
+	public void display(){
+		System.out.println("This is a base class!");
+	}
 }
 class Derived extends Base{
 	private int y;
 	Derived(int a, int b){
 		super(a);
 		y = b;
+	}
+	//override the method in the base class
+	public void display(){
+		System.out.println("This is a derived class!");
 	}
 }
 ```
