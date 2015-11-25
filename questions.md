@@ -64,7 +64,8 @@ function Student(props){
 	this.grade = props.grade || 1;
 }
 
-function F(){};
+// build inheritance method
+function F(){}; 
 F.prototype = Person.prototype;
 Student.prototype = new F();
 Student.prototype.constructor = Student;
@@ -76,5 +77,16 @@ Student.prototype.getGrade = function(){
 var s1 = new Student({name: 'Eva', grade: 0});
 s1.sayHi();
 s1.getGrade();
+
+s1.__proto__ === Student.prototype; // true
+s1.__proto__.__proto__ === Person.prototype; //true
+
+//The inheritance method can be encapsulated in a function
+function inherit(child, parent){
+	function F(){};
+	F.prototype = parent.prototype;
+	child.prototype = new F();
+	child.prototype.constructor = child;
+}
 
 ```
