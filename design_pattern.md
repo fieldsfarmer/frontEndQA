@@ -1,5 +1,5 @@
 ###### Singleton pattern
-- Only one instance of a class/object
+- Restrict the instantiation of a class to one object
 - JS: use self-invoking function (immediately-invoked function) & closure
 ```javascript
 var Singleton = (function(){

@@ -7,7 +7,9 @@ public abstract class Figure{
 	public abstract double getArea();
 }
 
-//Any classes that derive from the Figure class basically has 2 options: 1. The derived class must provide a definition for the getArea method OR 2. The derived class must be declared abstract itself.
+//Any classes that derive from the Figure class basically has 2 options: 
+//1. The derived class must provide a definition for the getArea method
+//2. The derived class must be declared abstract itself
 
 // Circle.java
 public class Circle extends Figure{
@@ -26,6 +28,23 @@ public class Circle extends Figure{
 ```
 - An interface can only provide method headings.
 - Interface allows multiple inheritance. But abstract class doesn't.
+
+###### constructor inheritance
+```java
+class Base{
+	private int x;
+	Base(int a){
+		x = a;
+	}
+}
+class Derived extends Base{
+	private int y;
+	Derived(int a, int b){
+		super(a);
+		y = b;
+	}
+}
+```
 
 
 ###### Strategy pattern
