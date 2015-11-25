@@ -24,16 +24,27 @@ var add = (function(){
 add();
 add();
 add(); // count is now 3
-function create_counter(initial){
+function createCounter(initial){
+	var x = initial || 0;
+	return function(){
+		return x+=1;
+	}
+}
+var c1 = createCounter();
+c1();
+c1(); //2
+
+function createCounter1(initial){
 	var x = initial || 0;
 	return {
 		inc: function(){
 			return x+=1;
 		}
 	}
+	
 }
-var c1 = create_counter();
-c1.inc();
-c1.inc();
-c1.inc();
+var c2 = createCounter1(10);
+c2.inc();
+c2.inc();
+c2.inc(); // 13
 ```
