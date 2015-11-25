@@ -1,2 +1,2 @@
-# frontEndQA
-notes on front end questions
+# Interview Questions
+notes on both frontend and backend questions
