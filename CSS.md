@@ -25,6 +25,15 @@ p{
 	padding: 50px 80px; /*top, bottom are 50px; left, right are 80px*/
 	padding: 50px; /*all are 50px*/
 }
+div{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+}
+div{
+    border: 1px solid #000;
+}
+
 ```
 
 ###### group selectors

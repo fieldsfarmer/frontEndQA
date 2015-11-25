@@ -14,7 +14,7 @@ POST: upload data from the browser to server; returns information from the serve
 * template data binding. Use $scope to expose model data to view. Views dynamically load template fragment via routes
 
 ###### AngularJS vs ExpressJS
-###### client-side rendering vs server-side rendering
+###### Client-side rendering vs Server-side rendering
 
 ###### Closure
 A closure is that a function having access to the parent scope, even after the parent function has closed.
