@@ -1,4 +1,5 @@
 ###### Singleton pattern
+- Only one instance of a class/object
 - JS: use self-invoking function (immediately-invoked function) & closure
 ```javascript
 var Singleton = (function(){
@@ -21,5 +22,10 @@ instance1 === instance2; //true
 ```
 - Java: set constructor as private
 ```java
+
+```
+
+###### Module pattern
+```javascript
 
 ```
