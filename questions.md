@@ -41,10 +41,40 @@ function createCounter1(initial){
 			return x+=1;
 		}
 	}
-	
 }
 var c2 = createCounter1(10);
 c2.inc();
 c2.inc();
 c2.inc(); // 13
+```
+
+###### 5. Javascript build objects & inheritance
+```javascript
+function Person(name){
+	this.name = name;
+}
+Person.prototype.sayHi = function(){
+	console.log('Hello, '+this.name+'!');
+}
+var p1 = new Person('Lily');
+p1.sayHi();
+
+function Student(props){
+	Person.call(this,props.name||'Unamed');
+	this.grade = props.grade || 1;
+}
+
+function F(){};
+F.prototype = Person.prototype;
+Student.prototype = new F();
+Student.prototype.constructor = Student;
+
+Student.prototype.getGrade = function(){
+	return this.grade;
+}
+
+var s1 = new Student({name: 'Eva', grade: 0});
+s1.sayHi();
+s1.getGrade();
+
 ```
