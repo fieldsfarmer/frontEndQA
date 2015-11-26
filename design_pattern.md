@@ -27,5 +27,21 @@ instance1 === instance2; //true
 
 ###### Module pattern
 ```javascript
-
+function CoolModule(){
+	var h = "Hello!";
+	var b = "Bye!";
+	function sayHi(){
+		console.log(h);
+	}
+	function sayBye(){
+		console.log(b);
+	}
+	return {
+		sayHi: sayHi,
+		sayBye: sayBye
+	};	
+}
+var f = CoolModule();
+f.sayHi();
+f.sayBye();
 ```
