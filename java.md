@@ -54,6 +54,5 @@ class Derived extends Base{
 ```
 
 
-###### Strategy pattern
 
 
