@@ -53,6 +53,21 @@ class Derived extends Base{
 }
 ```
 
-
+###### inheritance vs composition
+- inheritance is an "is-a" relationship; composition is a "has-a".
+- 
+```java
+//inheritance
+class Fruit {
+    //...
+}
+class Apple extends Fruit {
+    //this is a inheritance
+}
+class ThingsAtHome{
+	private Fruit fruit = new Fruit();
+}
+//class ThingsAtHome is related to class Fruit by composition, because it has an instance variable that holds a reference to a Fruit object. 
+```
 
 
