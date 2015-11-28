@@ -54,8 +54,7 @@ class Derived extends Base{
 ```
 
 ###### inheritance vs composition
-- inheritance is an "is-a" relationship; composition is a "has-a".
-- Java Example
+- inheritance is an "is-a" relationship; composition is a "has-a". Examples can be seen in Strategy Pattern, i.e. the context class.
 ```java
 //inheritance
 class Fruit {
@@ -70,4 +69,11 @@ class ThingsAtHome{
 //class ThingsAtHome is related to class Fruit by composition, because it has an instance variable that holds a reference to a Fruit object. 
 ```
 
+###### Syntax
+- Array, ArrayList
+```java
+ArrayList<Integer> l = new ArrayList<Integer>()
+ArrayList<Integer> l1 = new ArrayList<>() 
+
+```
 
