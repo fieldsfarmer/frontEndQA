@@ -115,9 +115,25 @@ public class JavaSkill4Interview{
 		pq.remove();
 		pq.size();
 		pq.isEmpty();
-
+		// Build a list of HashSet
 		List<HashSet<Integer>> listOfHashSet = new ArrayList<>(10);
         for(int i=0; i<10; ++i) listOfHashSet.add(new HashSet<>());
+        //Iterator
+        HashSet<Integer> set = new HashSet<>();
+        set.add(0);
+        set.add(1);
+        Iterator<Integer> itr = set.iterator();
+        while(itr.hasNext()){
+        	System.out.println(itr.next());
+    	}
+        //immutable List
+        String[] init = {"one","two","three"};
+		List l = new ArrayList(Arrays.asList(init));
+		System.out.println(l);
+		l = Collections.singletonList("four");
+		System.out.println(l);
+		
+
 	}
 }
 ```
