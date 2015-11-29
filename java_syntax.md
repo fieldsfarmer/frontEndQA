@@ -118,7 +118,7 @@ public class JavaSkill4Interview{
 		// Build a list of HashSet
 		List<HashSet<Integer>> listOfHashSet = new ArrayList<>(10);
         for(int i=0; i<10; ++i) listOfHashSet.add(new HashSet<>());
-        //Iterator
+        //Iterator on HashSet
         HashSet<Integer> set = new HashSet<>();
         set.add(0);
         set.add(1);
@@ -126,6 +126,8 @@ public class JavaSkill4Interview{
         while(itr.hasNext()){
         	System.out.println(itr.next());
     	}
+    	//Iterator on HashMap
+    	
         //immutable List
         String[] init = {"one","two","three"};
 		List l = new ArrayList(Arrays.asList(init));
