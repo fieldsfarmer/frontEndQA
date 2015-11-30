@@ -28,7 +28,8 @@ public class Circle extends Figure{
 ```
 - An interface can only provide method headings.
 - Interface allows multiple inheritance. But abstract class doesn't.
-
+- If you think you will need to add methods in the future, then an abstract class is better. Because if you add new method headings to an interface, then all of the classes that already implement that interface will have to implement the new methods. 
+- An abstract class is also good if you want to be able to declare non-public members. In an interface, all methods must be public.
 ###### constructor inheritance
 ```java
 class Base{

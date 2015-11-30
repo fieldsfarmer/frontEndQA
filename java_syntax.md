@@ -126,8 +126,8 @@ public class JavaSkill4Interview{
         while(itr.hasNext()){
         	System.out.println(itr.next());
     	}
-    	//Iterator on HashMap
-    	
+    	//if iterate on HashMap, just use key
+
         //immutable List
         String[] init = {"one","two","three"};
 		List l = new ArrayList(Arrays.asList(init));
@@ -135,6 +135,28 @@ public class JavaSkill4Interview{
 		l = Collections.singletonList("four");
 		System.out.println(l);
 		
+		//pass by value
+		public static void main( String[] args ){
+		    Dog aDog = new Dog("Max");
+		    foo(aDog);
+		    if (aDog.getName().equals("Max")) { //true
+		        System.out.println( "Java passes by value." );
+		    }
+		}
+
+		public static void foo(Dog d) {
+		    d.getName().equals("Max"); // true
+		    d = new Dog("Fifi");
+		    d.getName().equals("Fifi"); // true
+		}
+		Dog aDog = new Dog("Max");
+		bar(aDog);
+		aDog.getName().equals("Fifi"); // true
+
+		public void bar(Dog d) {
+		    d.getName().equals("Max"); // true
+		    d.setName("Fifi");
+		}
 
 	}
 }
