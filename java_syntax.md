@@ -136,27 +136,25 @@ public class JavaSkill4Interview{
 		System.out.println(l);
 		
 		//pass by value
-		public static void main( String[] args ){
-		    Dog aDog = new Dog("Max");
-		    foo(aDog);
-		    if (aDog.getName().equals("Max")) { //true
-		        System.out.println( "Java passes by value." );
-		    }
+		public static void bar(Dog d) {
+		    d.getName().equals("Max"); // true
+		    d.setName("Fifi");
 		}
-
 		public static void foo(Dog d) {
 		    d.getName().equals("Max"); // true
 		    d = new Dog("Fifi");
 		    d.getName().equals("Fifi"); // true
 		}
+		
 		Dog aDog = new Dog("Max");
 		bar(aDog);
 		aDog.getName().equals("Fifi"); // true
-
-		public void bar(Dog d) {
-		    d.getName().equals("Max"); // true
-		    d.setName("Fifi");
-		}
+		Dog bDog = new Dog("Max");
+	    foo(bDog);
+	    if (bDog.getName().equals("Max")) { //true
+	        System.out.println( "Java passes by value." );
+	    }
+		
 
 	}
 }
