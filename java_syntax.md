@@ -136,11 +136,11 @@ public class JavaSkill4Interview{
 		System.out.println(l);
 		
 		//pass by value
-		public static void bar(Dog d) {
+		public void bar(Dog d) {
 		    d.getName().equals("Max"); // true
 		    d.setName("Fifi");
 		}
-		public static void foo(Dog d) {
+		public void foo(Dog d) {
 		    d.getName().equals("Max"); // true
 		    d = new Dog("Fifi");
 		    d.getName().equals("Fifi"); // true
@@ -154,8 +154,27 @@ public class JavaSkill4Interview{
 	    if (bDog.getName().equals("Max")) { //true
 	        System.out.println( "Java passes by value." );
 	    }
-		
-
+	}
+	public static void bar(Dog d) {
+	    d.getName().equals("Max"); // true
+	    d.setName("Fifi");
+	}
+	public static void foo(Dog d) {
+	    d.getName().equals("Max"); // true
+	    d = new Dog("Fifi");
+	    d.getName().equals("Fifi"); // true
+	}
+}
+class Dog{
+	private String name;
+	public String getName(){
+		return name;
+	}
+	public Dog(String n){
+		name = n;
+	}
+	public void setName(String n){
+		name = n;
 	}
 }
 ```
