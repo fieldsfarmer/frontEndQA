@@ -1,4 +1,4 @@
-###### Abstract Class vs Interface
+#### Abstract Class vs Interface
 - An abstract class is one with at least one abstract method, which just has no implementation code .
 - An abstract class can have some implementation code. Thus can have non-abstract methods, can also have constructors and instance variables.
 ```java
@@ -70,6 +70,8 @@ class ThingsAtHome{
 }
 //class ThingsAtHome is related to class Fruit by composition, because it has an instance variable that holds a reference to a Fruit object. 
 ```
+#### Polymorphism
+I is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
 
 ###### Syntax
 - Array, ArrayList
@@ -90,23 +92,18 @@ ArrayList<Integer> l1 = new ArrayList<>()
 ```java
 class OuterClass{
    private static String msg = "GeeksForGeeks";
-    
    // Static nested class
    public static class NestedStaticClass{
-      
        // Only static members of Outer class is directly accessible in nested 
        // static class 
        public void printMessage() {
- 
          // Try making 'message' a non-static variable, there will be 
          // compiler error  
          System.out.println("Message from nested static class: " + msg); 
        }
     }
-    
     // non-static nested class - also called Inner class
     public class InnerClass{
-        
        // Both static and non-static members of Outer class are accessible in 
        // this Inner class
        public void display(){
