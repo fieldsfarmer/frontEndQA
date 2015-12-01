@@ -81,3 +81,16 @@ ArrayList<Integer> l1 = new ArrayList<>()
 ###### static method
 - One rule-of-thumb: ask yourself "does it make sense to call this method, even if no Obj has been constructed yet?" If so, it should definitely be static.
 
+###### checked exceptions vs unchecked exceptions
+- A checked exception is an exception that occurs at the compile time.
+- An Unchecked exception (Runtim Exception) is an exception that occurs at the time of execution. These exceptions include programming bugs, such as logic errors or improper use of an API. runtime exceptions are ignored at the time of compilation.
+
+- A checked exception must be caught somewhere in your code. If not code will not compile. That's why they're called checked exceptions. In other hand RuntimeExceptions (unchecked exceptions), the calling 
+method is under no obligation to handle or declare it. 
+
+- Therefore all the exceptions which compiler force you to handle are directly derived from the class java.lang.Exception and all the other exceptions which compiler not force you to handle are derived from java.lang.RuntimeException.
+
+- Examples of checked exceptions are: FileNotFoundException, IOException, etc
+
+- Examplse of RuntimeException: NullPointerException, IndexOutOfBoundsException, etc
+
