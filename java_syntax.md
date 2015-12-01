@@ -4,6 +4,9 @@ import java.util.*;
 // import java.util.ArrayList;
 public class JavaSkill4Interview{
 	public static void main(String[] args) {
+		char c = 'a';
+		char c1 = (char)(c + 1);
+		int a = c - 'b';
 		//String
 		String s = "abcd";
 		s.charAt(0);
@@ -27,6 +30,8 @@ public class JavaSkill4Interview{
 		sb.deleteCharAt(sb.length()-1);
 		sb.reverse();
 		sb.toString();
+		//reverse a string
+		String ssb = new StringBuffer(sb).reverse().toString();
 		// System.out.println(sb);
 		//Array
 		int[] a = new int[10];
@@ -53,6 +58,7 @@ public class JavaSkill4Interview{
 		list.get(0); //2; cannot use list[0]
 		list.remove(0);
 		System.out.println(list.get(0));
+		Collection.reverse(list);
 		Collections.sort(list);
 		Collections.sort(list, Collections.reverseOrder());
 		Collections.sort(list, new Comparator<Integer>(){
