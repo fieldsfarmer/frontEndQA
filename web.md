@@ -24,7 +24,22 @@
 - It is fast due to V8 engine.
 - Event loop. It is a single thread that performs all I/O operations asynchronously. Traditionally, I/O operations either run synchronously (blocking) or asynchronously by spawning off parallel threads to perform the work. This old approach consumes a lot of memory and is notoriously difficult to program. In contrast, when a Node application needs to perform an I/O operation, it sends an asynchronous task to the event loop, along with a callback function, and then continues to execute the rest of its program. When the async operation completes, the event loop returns to the task to execute its callback.
 - In other words, reading and writing to network connections, reading/writing to the filesystem, and reading/writing to the database–all very common tasks in web apps–execute very, very fast in Node. Node allows you to build fast, scalable network applications capable of handling a huge number of simultaneous connections with high throughput.
-
+- The Event Loop is a queue of callback functions. When an async function executes, the callback function is pushed into the queue. The JavaScript engine doesn't start processing the event loop until the code after an async function has executed. This means that JavaScript code is not multi-threaded even though it appears to be so. 
+- The event loop is a first-in-first-out (FIFO) queue, meaning that callbacks execute in the order they were added onto the queue.
+```javascript
+console.log( "a" );
+setTimeout(function() {
+    console.log( "c" )
+}, 500 );
+setTimeout(function() {
+    console.log( "d" )
+}, 500 );
+setTimeout(function() {
+    console.log( "e" )
+}, 500 );
+console.log( "b" );
+// a b c d e
+```
 
 
 
