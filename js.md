@@ -1,6 +1,18 @@
 #### Future work
 -promise, yield, async/await
 
+#### `===` vs `==`
+```javascript
+0 == false   // true
+0 === false  // false, because they are of a different type
+1 == "1"     // true, automatic type conversion for value only
+1 === "1"    // false, because they are of a different type
+null == undefined // true
+null === undefined // false
+'0' == false // true
+'0' === false // false
+```
+
 ###### Closure
 A closure is that a function having access to the parent scope, even after the parent function has closed.
 ```javascript
