@@ -1,3 +1,6 @@
+#### Future work
+-promise, yield, async/await
+
 ###### Closure
 A closure is that a function having access to the parent scope, even after the parent function has closed.
 ```javascript
