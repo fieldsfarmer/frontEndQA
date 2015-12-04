@@ -13,7 +13,7 @@ null === undefined // false
 '0' === false // false
 ```
 
-###### Closure
+#### Closure
 A closure is that a function having access to the parent scope, even after the parent function has closed.
 ```javascript
 // add is assigned with the value of a self-invoking function
@@ -48,7 +48,7 @@ c2.inc();
 c2.inc(); // 13
 ```
 
-###### Javascript build objects & inheritance
+#### Javascript build objects & inheritance
 ```javascript
 function Person(name){
 	this.name = name;
