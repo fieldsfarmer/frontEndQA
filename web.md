@@ -17,7 +17,7 @@
 - template data binding. Use $scope to expose model data to view. Views dynamically load template fragment via routes
 
 #### Synchronous vs Asynchronous I/O
-- [This Link](http://code.tutsplus.com/tutorials/event-based-programming-what-async-has-over-sync--net-30027)
+- JS handle async [This Link](http://code.tutsplus.com/tutorials/event-based-programming-what-async-has-over-sync--net-30027)
 - In synchronous I/O, a thread starts an I/O operation and immediately enters a wait state until the I/O request has completed. 
 - A thread performing asynchronous I/O sends an I/O request to the kernel by calling an appropriate function. If the request is accepted by the kernel, the calling thread continues processing another job until the kernel signals to the thread that the I/O operation is complete. It then interrupts its current job and processes the data from the I/O operation as necessary. 
 
