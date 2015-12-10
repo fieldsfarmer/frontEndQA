@@ -38,6 +38,7 @@ console.log( "b" );
 
 #### NodeJS
 - [Reasons to use it](http://blog.modulus.io/top-10-reasons-to-use-node)
+- [More](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
 - It is fast due to V8 engine.
 - Event loop. It is a single thread that performs all I/O operations asynchronously. Traditionally, I/O operations either run synchronously (blocking) or asynchronously by spawning off parallel threads to perform the work. This old approach consumes a lot of memory and is notoriously difficult to program. In contrast, when a Node application needs to perform an I/O operation, it sends an asynchronous task to the **event loop**, along with a callback function, and then continues to execute the rest of its program. When the async operation completes, the event loop returns to the task to execute its callback.
 - In other words, reading and writing to network connections, reading/writing to the filesystem, and reading/writing to the database–all very common tasks in web apps–execute very, very fast in Node. Node allows you to build fast, scalable network applications capable of handling a huge number of simultaneous connections with high throughput.
