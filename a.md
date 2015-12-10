@@ -18,8 +18,7 @@ HashMap<String, HashMap<Integer, ArrayList<String>>>
 //2. 熟悉一下自己想用的语言的read in file, write out file.其实他们都会提供代码handle这部分，但是熟悉一下，还是有好处。
 //3. 你所有的code,其实只在一个file里面完成，我一开始是在main里面写，也能跑，后来还是被印度小哥提醒，发现原来在另外一个file里面，comment还写着 // implement your code here. 
 //4. 给你的input file很大，可以自己截取最开始的10个entry左右，用小的file 测试代码。
-//5. 关于选题，说实话我只看懂了一个，另外两个一开始没有很快有思路。这个时候，一定要speak for yourself, 不要表现得很急，但是也绝不要礼让，想做哪个，就一定要说出来。
-我可能是占了作为女生的便宜，组里的白人大叔让我先选了，感觉那个印度小哥也很想做这个。 
+//5. 关于选题，说实话我只看懂了一个，另外两个一开始没有很快有思路。这个时候，一定要speak for yourself, 不要表现得很急，但是也绝不要礼让，想做哪个，就一定要说出来。我可能是占了作为女生的便宜，组里的白人大叔让我先选了，感觉那个印度小哥也很想做这个。 
 //6. 选完了题目，就赶紧想思路，赶紧写，数据结构很重要，没有什么算法。而数据结果，无非也就是hashmap, set, arraylist几个，能简单的，不要往 tree 什么的去想。
 //hashmap, hashmap, hashmap, 重要的东西说三遍。
 
