@@ -116,6 +116,7 @@ public class JavaSkill4Interview{
 		// Queue<Integer> pq = new PriorityQueue<>();
 		Comparator<Integer> cptr1 = (Integer i1, Integer i2)->(i2-i1);
 		//max queue
+		Queue<Integer> pq = new PriorityQueue<>((Integer i1, Integer i2)->(i2-i1));
 		Queue<Integer> pq = new PriorityQueue<>(cptr.reversed());
 		//max queue
 		Queue<Integer> pq = new PriorityQueue<>(cptr1);
@@ -125,6 +126,7 @@ public class JavaSkill4Interview{
 		pq.remove();
 		pq.size();
 		pq.isEmpty();
+
 		// Build a list of HashSet
 		List<HashSet<Integer>> listOfHashSet = new ArrayList<>(10);
         for(int i=0; i<10; ++i) listOfHashSet.add(new HashSet<>());
