@@ -111,11 +111,12 @@ public class JavaSkill4Interview{
 		for(Integer i : mp.values()){};
 		mp.isEmpty();
 		mp.size();
+
 		//min queue
-		// PriorityQueue<Integer> pq = new PriorityQueue<>();
+		// Queue<Integer> pq = new PriorityQueue<>();
 		Comparator<Integer> cptr1 = (Integer i1, Integer i2)->(i2-i1);
 		//max queue
-		// PriorityQueue<Integer> pq = new PriorityQueue<>(cptr.reversed());
+		// Queue<Integer> pq = new PriorityQueue<>(cptr.reversed());
 		//max queue
 		PriorityQueue<Integer> pq = new PriorityQueue<>(cptr1);
 		pq.add(100);
