@@ -33,6 +33,9 @@ public class JavaSkill4Interview{
 		//reverse a string
 		String ssb = new StringBuffer(sb).reverse().toString();
 		// System.out.println(sb);
+		// +
+		str1 += str2; // It is equivalent to doing the following:
+		str1 = new StringBuilder().append(str1).append(str2).toString();
 		//Array
 		int[] a = new int[10];
 		int l = a.length;
