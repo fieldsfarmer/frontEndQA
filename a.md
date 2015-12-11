@@ -1,3 +1,4 @@
+http://www.tutorialspoint.com/java/util/
 ```java
 //第一题，用的是Hashmap记录每个时间点已经储存的content
 HashMap<String, HashMap<Integer, ArrayList<String>>>
