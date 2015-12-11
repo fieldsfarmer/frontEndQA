@@ -102,6 +102,9 @@ public class JavaSkill4Interview{
 
 		// HashSet
 		HashSet<Integer> set = new HashSet<>();
+		List<Interger> l = new ArrayList<>();
+		l.add(1);
+		set.addAll(l);
 		set.add(0);
 		set.remove(0);
 		if(set.contains(0)){};
@@ -130,7 +133,9 @@ public class JavaSkill4Interview{
 		pq.add(10);
 		System.out.println(pq.peek());
 		pq.remove();
-		pq.remove(100);
+		pq.poll(); // get rid of the head; return the head; if pq empty, return null
+		pq.offer(3);
+		pq.remove(100); //linear time complexity
 		pq.size();
 		pq.isEmpty();
 
@@ -153,49 +158,10 @@ public class JavaSkill4Interview{
 		System.out.println(l);
 		l = Collections.singletonList("four");
 		System.out.println(l);
-		
-		//pass by value
-		public void bar(Dog d) {
-		    d.getName().equals("Max"); // true
-		    d.setName("Fifi");
-		}
-		public void foo(Dog d) {
-		    d.getName().equals("Max"); // true
-		    d = new Dog("Fifi");
-		    d.getName().equals("Fifi"); // true
-		}
-		
-		Dog aDog = new Dog("Max");
-		bar(aDog);
-		aDog.getName().equals("Fifi"); // true
-		Dog bDog = new Dog("Max");
-	    foo(bDog);
-	    if (bDog.getName().equals("Max")) { //true
-	        System.out.println( "Java passes by value." );
-	    }
-	}
-	public static void bar(Dog d) {
-	    d.getName().equals("Max"); // true
-	    d.setName("Fifi");
-	}
-	public static void foo(Dog d) {
-	    d.getName().equals("Max"); // true
-	    d = new Dog("Fifi");
-	    d.getName().equals("Fifi"); // true
 	}
 }
-class Dog{
-	private String name;
-	public String getName(){
-		return name;
-	}
-	public Dog(String n){
-		name = n;
-	}
-	public void setName(String n){
-		name = n;
-	}
-}
+		
+		
 ```
 
 ```java
@@ -225,5 +191,48 @@ public int[] maxSlidingWindow(int[] a, int k) {
         }
     }
     return r;
+}
+```
+```java
+//pass by value
+public void bar(Dog d) {
+    d.getName().equals("Max"); // true
+    d.setName("Fifi");
+}
+public void foo(Dog d) {
+    d.getName().equals("Max"); // true
+    d = new Dog("Fifi");
+    d.getName().equals("Fifi"); // true
+}
+
+	Dog aDog = new Dog("Max");
+	bar(aDog);
+	aDog.getName().equals("Fifi"); // true
+	Dog bDog = new Dog("Max");
+	foo(bDog);
+	if (bDog.getName().equals("Max")) { //true
+	    System.out.println( "Java passes by value." );
+	}
+	public static void bar(Dog d) {
+	    d.getName().equals("Max"); // true
+	    d.setName("Fifi");
+	}
+	public static void foo(Dog d) {
+	    d.getName().equals("Max"); // true
+	    d = new Dog("Fifi");
+	    d.getName().equals("Fifi"); // true
+	}
+
+class Dog{
+	private String name;
+	public String getName(){
+		return name;
+	}
+	public Dog(String n){
+		name = n;
+	}
+	public void setName(String n){
+		name = n;
+	}
 }
 ```
