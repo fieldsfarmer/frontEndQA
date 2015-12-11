@@ -1,4 +1,6 @@
 [tutorial](http://www.tutorialspoint.com/java/util/)
+[eclipse shortcut](http://www.open-open.com/bbs/view/1320934157953)
+[Another one](http://www.open-open.com/bbs/view/1320934157953)
 ```java
 //第一题，用的是Hashmap记录每个时间点已经储存的content
 HashMap<String, HashMap<Integer, ArrayList<String>>>
