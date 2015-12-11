@@ -36,6 +36,7 @@ public class JavaSkill4Interview{
 		// +
 		str1 += str2; // It is equivalent to doing the following:
 		str1 = new StringBuilder().append(str1).append(str2).toString();
+
 		//Array
 		int[] a = new int[10];
 		int l = a.length;
@@ -47,6 +48,7 @@ public class JavaSkill4Interview{
 		int max = Integer.MAX_VALUE;
 		int min = Integer.MIN_VALUE;
 		Arrays.sort(a);
+
 		//List; List is an interface; ArrayList implements List
 		List<Integer> list = new ArrayList<Integer>();
 		ArrayList<Integer> list1 = new ArrayList<>();
@@ -77,6 +79,7 @@ public class JavaSkill4Interview{
 		list.sort((Integer o1, Integer o2)->o1-o2);
 		Comparator<Integer> cptr = (Integer o1, Integer o2)->o1-o2;
 		list.sort(cptr);
+
 		//Stack
 		Stack<Integer> st = new Stack<>();
 		st.push(0);
@@ -86,6 +89,7 @@ public class JavaSkill4Interview{
 		peek = st.pop(); 
 		st.isEmpty();
 		st.size();
+
 		// Queue
 		Queue<Integer> q = new LinkedList<>();
 		q.add(0);
@@ -95,12 +99,14 @@ public class JavaSkill4Interview{
 		q.remove();
 		q.isEmpty();
 		q.size();
+
 		// HashSet
 		HashSet<Integer> set = new HashSet<>();
 		set.add(0);
 		set.remove(0);
 		if(set.contains(0)){};
 		set.size(); set.isEmpty();
+
 		//HashMap
 		HashMap<Character, Integer> mp = new HashMap<>();
 		mp.put('c',1);
@@ -124,6 +130,7 @@ public class JavaSkill4Interview{
 		pq.add(10);
 		System.out.println(pq.peek());
 		pq.remove();
+		pq.remove(100);
 		pq.size();
 		pq.isEmpty();
 
@@ -188,5 +195,35 @@ class Dog{
 	public void setName(String n){
 		name = n;
 	}
+}
+```
+
+```java
+//deque
+public int[] maxSlidingWindow(int[] a, int k) {     
+    if (a == null || k <= 0) {
+        return new int[0];
+    }
+    int n = a.length;
+    int[] r = new int[n-k+1];
+    int ri = 0;
+    // store index
+    Deque<Integer> q = new ArrayDeque<>();
+    for (int i = 0; i < a.length; i++) {
+        // remove numbers out of range k
+        while (!q.isEmpty() && q.peek() < i - k + 1) {
+            q.poll();
+        }
+        // remove smaller numbers in k range as they are useless
+        while (!q.isEmpty() && a[q.peekLast()] < a[i]) {
+            q.pollLast();
+        }
+        // q contains index... r contains content
+        q.offer(i);
+        if (i >= k - 1) {
+            r[ri++] = a[q.peek()];
+        }
+    }
+    return r;
 }
 ```
