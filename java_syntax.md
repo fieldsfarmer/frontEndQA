@@ -9,7 +9,7 @@ public class JavaSkill4Interview{
 		int a = c - 'b';
 		//String
 		String s = "abcd";
-		s.charAt(0);
+		s.charAt(0); // you cannot change the value of a string
 		s.length();
 		s.substring(1,2);// "b" the second index is exclusive
 		s.substring(1); //"bcd"
