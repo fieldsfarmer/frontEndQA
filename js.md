@@ -50,6 +50,7 @@ c2.inc(); // 13
 
 #### Javascript build objects & inheritance
 ```javascript
+// use constructor 
 function Person(name){
 	this.name = name;
 }
